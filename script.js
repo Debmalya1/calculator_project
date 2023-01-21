@@ -31,7 +31,17 @@ for(var i=0;i<buttons.length;i++)
         }
         else if(value== ".")
         {
-            if(text.length && !text.includes('.'))
+            if(text.length && !text.includes('.') && flag==0)
+            {
+                display.innerText=text + '.';
+            }
+            else if(flag==1 && !text.includes('.'))
+            {
+                display.innerText="";
+                display.innerText='.';
+                flag=0;
+            }
+            else
             {
                 display.innerText=text + '.';
             }
